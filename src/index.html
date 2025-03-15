@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Logo Loader</title>
+</head>
+<body>
+    <h1>Dynamic Logo</h1>
+    <div id="logo-container">Loading...</div>
+
+    <script type="module">
+        import { getLogoByParam } from "./index.ts";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("hello")
+            const selectedLogo = getLogoByParam();
+            const logoContainer = document.getElementById("logo-container");
+
+            if (logoContainer) {
+                if (selectedLogo) {
+                    logoContainer.innerHTML = `<img src="${selectedLogo}" alt="Logo" width="200">`;
+                } else {
+                    logoContainer.innerHTML = `<p>No logo found. Try adding ?logo=1 to the URL.</p>`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

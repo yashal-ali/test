@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "target": "ESNext",
+      "allowJs": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": true
+    }
+  }
+  
