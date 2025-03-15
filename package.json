@@ -1,21 +1,25 @@
 {
   "name": "dynamic-logo-loader",
   "version": "1.0.0",
-  "description": "A reusable Next.js component to dynamically load logos from a folder.",
-  "main": "src/index.ts",
-  "type": "commonjs",
-  "exports": {
-    ".": "./src/index.ts"
+  "description": "A simple utility to fetch logo file names from a directory.",
+  "main": "dist/getLogo.js",
+  "types": "dist/getLogo.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
   },
-  "author": "Your Name",
-  "license": "MIT",
-  "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^22.13.10",
-    "@types/react": "^19.0.10",
-    "ts-node": "^10.9.2"
-  }
+    "typescript": "^5.0.0",
+    "@types/node": "^18.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "import": "./dist/getLogo.js",
+    "require": "./dist/getLogo.cjs"
+  },
+  "license": "MIT"
 }
