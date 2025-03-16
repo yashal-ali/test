@@ -4,7 +4,9 @@
       "module": "CommonJS",
       "moduleResolution": "Node",
       "esModuleInterop": true,
-      "allowJs": true
+      "allowJs": true,
+      "outDir": "./dist", // Make sure this is set
+      "rootDir": "./src", // Source directory
     }
   ,
   
