@@ -65,7 +65,6 @@ app.post("/logos", function (req, res) {
     var logos = getLogos(folder);
     res.json({ logos: logos });
 });
-// ✅ Get a specific logo by index from a dynamic folder (using request body)
 app.post("/logo", function (req, res) {
     var _a = req.body, folder = _a.folder, logo = _a.logo; // Get folder path and logo index from request body
     if (!folder)
