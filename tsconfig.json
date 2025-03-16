@@ -1,11 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "outDir": "dist",
-    "declaration": true,
-    "strict": true
-  },
+  
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "allowJs": true
+    }
+  ,
+  
   "include": ["src"]
 }

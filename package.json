@@ -1,5 +1,5 @@
 {
-  "name": "dynamic-logo-loader",
+  "name": "dynamic-logo-loader-api",
   "version": "1.0.0",
   "description": "A simple utility to fetch logo file names from a directory.",
   "main": "dist/getLogo.js",
@@ -8,15 +8,20 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "dynamic-logo-loader": "github:yashal-ali/test",
+    "express": "^4.21.2"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^18.0.0"
+    "@types/node": "^18.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   },
   "files": [
     "dist"
   ],
-  "type": "module",
+  "type": "commonjs",
   "exports": {
     "import": "./dist/getLogo.js",
     "require": "./dist/getLogo.cjs"
